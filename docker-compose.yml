@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:18-alpine
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - data:/var/lib/postgresql/data
+      - .docker/:/database/
+
+volumes:
+  data:
