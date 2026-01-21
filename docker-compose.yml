@@ -4,6 +4,7 @@ services:
     restart: always
     environment:
       - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=ecommerce
     volumes:
       - data:/var/lib/postgresql/data
       - .docker/:/database/
